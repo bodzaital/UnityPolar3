@@ -13,8 +13,8 @@ static class Extensions
         Vector3 rotated = v - sphere.position;
         rotated = Quaternion.Euler(sphere.rotation.eulerAngles.x, sphere.rotation.eulerAngles.y, sphere.rotation.eulerAngles.z) * rotated;
 
-        Vector3 azimuthReference = Quaternion.Euler(0, sphere.rotation.eulerAngles.y, 0) * new Vector3(0, 0, -1 *sphere.localScale.z);
-        //Vector3 rightAzimuthReference = Quaternion.Euler(0, sphere.rotation.eulerAngles.y, 0) * new Vector3(sphere.localScale.x, 0, 0);
+        Vector3 azimuthReference = Quaternion.Euler(sphere.rotation.eulerAngles.x, sphere.rotation.eulerAngles.y, sphere.rotation.eulerAngles.z) * new Vector3(0, 0, -1 *sphere.localScale.z);
+        //Vector3 rightAzimuthReference = Quaternion.Euler(sphere.rotation.eulerAngles.x, sphere.rotation.eulerAngles.y, sphere.rotation.eulerAngles.z) * new Vector3(sphere.localScale.x, 0, 0);
 
         Polar2 polar = new Polar2(
             Vector3.SignedAngle(Vector3.up, rotated, Vector3.up),
