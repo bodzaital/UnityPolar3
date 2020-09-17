@@ -11,7 +11,7 @@ static class Extensions
     public static Polar2 ToPolar2(this Vector3 v, Transform sphere)
     {
         Vector3 rotated = v - sphere.position;
-        rotated = Quaternion.Euler(0, sphere.rotation.eulerAngles.y, 0) * rotated;
+        rotated = Quaternion.Euler(sphere.rotation.eulerAngles.x, sphere.rotation.eulerAngles.y, sphere.rotation.eulerAngles.z) * rotated;
 
         Vector3 azimuthReference = Quaternion.Euler(0, sphere.rotation.eulerAngles.y, 0) * new Vector3(0, 0, -1 *sphere.localScale.z);
         //Vector3 rightAzimuthReference = Quaternion.Euler(0, sphere.rotation.eulerAngles.y, 0) * new Vector3(sphere.localScale.x, 0, 0);
