@@ -3,7 +3,7 @@ using UnityEngine;
 static class Extensions
 {
     /// <summary>
-    /// Converts a <see cref="Vector3"/> in world space to a <see cref="Polar2"/> in texture space.
+    /// Converts a <see cref="Vector3"/> in world space to a <see cref="Polar2"/>.
     /// </summary>
     /// <param name="v">World space vector.</param>
     /// <param name="sphere">The sphere on which the vector is on.</param>
